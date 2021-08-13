@@ -97,7 +97,7 @@ if(isset($_POST['esubmit'])){
     $headers = "From : $from";
 
     mail($to , $subject , $message, $headers);
-    echo "email sent"
+    echo "email sent" ;
 }
 
 ?>
