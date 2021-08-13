@@ -2,7 +2,7 @@
 
 <html>
     <body>
-        <form method="post" action="<?php echo $_SERVEr['PHP_SELF']; ?>">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         Email: <input name="email" type="text"/> <br/><br/>
         Subject: <input name="subject" type="text"/><br/><br/>
         Message:<br/>
@@ -94,11 +94,11 @@ if(isset($_POST['submit'])){
     $subject = $_POST['subject'];
     $message = $_POST['message'];
     $from = $_POST['email'];;
-    $header = "From : $from";
+    $headers = "From : $from";
 
 }
 
-mail($to, $subject, $message, $header);
+mail($to , $subject , $message, $headers);
 
 echo 'email sent'
 
