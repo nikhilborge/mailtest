@@ -90,17 +90,15 @@
 
 <?php
 if(isset($_POST['esubmit'])){
-    $to ="nikhilborge3439.nb@gmail.com";
+    $to ="nikhilb8325@gmail.com";
     $subject = $_POST['subject'];
     $message = $_POST['message'];
     $from = $_POST['email'];;
     $headers = "From : $from";
 
+    mail($to , $subject , $message, $headers);
+    echo "email sent"
 }
-
-mail($to , $subject , $message, $headers);
-
-echo 'email sent'
 
 ?>
 
