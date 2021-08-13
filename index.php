@@ -7,7 +7,7 @@
         Subject: <input name="subject" type="text"/><br/><br/>
         Message:<br/>
         <textarea name="message" rows="15" cols="40"></textarea><br/><br/>
-        <input type="submit" type="submit"/>
+        <input name="esubmit" type="submit"/>
         </form>
     </body>
 </html>
@@ -89,7 +89,7 @@
 
 
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['esubmit'])){
     $to ="nikhilborge3439.nb@gmail.com";
     $subject = $_POST['subject'];
     $message = $_POST['message'];
