@@ -1,8 +1,8 @@
 
 
-<!-- <html>
+<html>
     <body>
-        <form method="post" action="">
+        <form method="post" action="<?php echo $_SERVEr['PHP_SELF']; ?>">
         Email: <input name="email" type="text"/> <br/><br/>
         Subject: <input name="subject" type="text"/><br/><br/>
         Message:<br/>
@@ -10,16 +10,16 @@
         <input type="submit" type="submit"/>
         </form>
     </body>
-</html> -->
+</html>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <script src="/index.js"></script>
     <title>Form</title>
 </head>
@@ -63,7 +63,7 @@
 </nav>
 
 <div class="container-fluid mt-3 padding">
-<form action="<?php echo $_SERVEr['PHP_SELF']; ?>" method="post">
+<form action="" method="post">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -84,7 +84,7 @@
 </div>
 
 </body>
-</html>
+</html>  -->
 
 
 
@@ -98,12 +98,9 @@ if(isset($_POST['submit'])){
 
 }
 
-mail($to, $subject, $message, $headers);
+mail($to, $subject, $message, $header);
 
-echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-<strong>Success</strong> Your email '.$email.' and password '.$password.' has been submitted successfully.
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>'
+echo 'email sent'
 
 ?>
 
